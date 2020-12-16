@@ -300,10 +300,16 @@ body {
 }
 
 .image-container {
-  margin-right: -16rem;
+  // margin-right: -16rem;
 
   @include respond(tab-port) {
     order: 1;
+    flex: 47%;
+  }
+}
+
+.second-container {
+  @include respond(tab-port) {
     flex: 47%;
   }
 }
@@ -416,37 +422,16 @@ body {
   padding: 2rem;
   border-radius: 5px;
   position: relative;
+  background-color: $grey-100;
 
   @include respond(tab-port) {
     margin-right: 3rem;
-    margin-top: -10rem;
+    // margin-top: -10rem;
     margin-bottom: 18rem;
 
-    &:nth-child(2) {
-      margin-top: -6rem;
-      margin-bottom: 14rem;
+    &:last-child {
+      display: none;
     }
-    &:nth-child(3) {
-      margin-top: -4rem;
-      margin-bottom: 10rem;
-    }
-  }
-}
-
-.box:not(:last-child)::after {
-  content: '';
-  background: $brightRed;
-  position: absolute;
-  bottom: -8rem;
-  left: 50%;
-  height: 8rem;
-  width: 6px;
-
-  @include respond(tab-port) {
-    bottom: 14rem;
-    left: 100%;
-    height: 6px;
-    width: 5rem;
   }
 }
 
@@ -463,7 +448,7 @@ body {
 }
 
 .image-circle {
-  padding: 29px 10px;
+  // padding: 29px 10px;
   border-radius: 50%;
   // width: 30%;
   width: 100px;
@@ -483,10 +468,18 @@ body {
 }
 
 .image-circle img {
-  width: 35px;
+  width: 75px;
   @include respond(tab-port) {
     width: 45px;
   }
+}
+
+//
+.side-box {
+  display: flex;
+}
+.side-number {
+  margin-right: 2rem;
 }
 
 /////
@@ -497,7 +490,7 @@ body {
   text-align: center;
   // background: url(../../images/bg-boost-mobile.svg) no-repeat center center;
   // background-size: cover;
-  background-color: #3a3053;
+  background-color: $brightRed;
 
   @include respond(tab-port) {
     // background: url(../../images/bg-boost-desktop.svg) no-repeat center center;
@@ -516,8 +509,8 @@ body {
 }
 
 .action button {
-  background-color: $brightRed;
-  color: white;
+  background-color: #ffffff;
+  color: $brightRed;
   font-size: 2rem;
   display: block;
   padding: 1.5rem 4rem;

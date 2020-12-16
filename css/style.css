@@ -283,12 +283,14 @@ body {
     .hero img {
       width: 100%; } }
 
-.image-container {
-  margin-right: -16rem; }
-  @media (min-width: 900px) {
-    .image-container {
-      order: 1;
-      flex: 47%; } }
+@media (min-width: 900px) {
+  .image-container {
+    order: 1;
+    flex: 47%; } }
+
+@media (min-width: 900px) {
+  .second-container {
+    flex: 47%; } }
 
 .text-container {
   display: flex;
@@ -379,33 +381,14 @@ body {
   margin-bottom: 8rem;
   padding: 2rem;
   border-radius: 5px;
-  position: relative; }
+  position: relative;
+  background-color: #ecf2f8; }
   @media (min-width: 900px) {
     .box {
       margin-right: 3rem;
-      margin-top: -10rem;
       margin-bottom: 18rem; }
-      .box:nth-child(2) {
-        margin-top: -6rem;
-        margin-bottom: 14rem; }
-      .box:nth-child(3) {
-        margin-top: -4rem;
-        margin-bottom: 10rem; } }
-
-.box:not(:last-child)::after {
-  content: '';
-  background: #f25f3a;
-  position: absolute;
-  bottom: -8rem;
-  left: 50%;
-  height: 8rem;
-  width: 6px; }
-  @media (min-width: 900px) {
-    .box:not(:last-child)::after {
-      bottom: 14rem;
-      left: 100%;
-      height: 6px;
-      width: 5rem; } }
+      .box:last-child {
+        display: none; } }
 
 .box-title {
   font-size: 2.4rem;
@@ -418,7 +401,6 @@ body {
   margin-bottom: 2.5rem; }
 
 .image-circle {
-  padding: 29px 10px;
   border-radius: 50%;
   width: 100px;
   margin: auto;
@@ -432,17 +414,23 @@ body {
       margin-left: 2rem; } }
 
 .image-circle img {
-  width: 35px; }
+  width: 75px; }
   @media (min-width: 900px) {
     .image-circle img {
       width: 45px; } }
+
+.side-box {
+  display: flex; }
+
+.side-number {
+  margin-right: 2rem; }
 
 .action {
   width: 100%;
   margin: auto;
   padding: 7rem 2rem;
   text-align: center;
-  background-color: #3a3053; }
+  background-color: #f25f3a; }
   @media (min-width: 900px) {
     .action {
       background-color: #3a3053; } }
@@ -456,8 +444,8 @@ body {
       font-size: 4.2rem; } }
 
 .action button {
-  background-color: #f25f3a;
-  color: white;
+  background-color: #ffffff;
+  color: #f25f3a;
   font-size: 2rem;
   display: block;
   padding: 1.5rem 4rem;
