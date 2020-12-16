@@ -72,6 +72,536 @@ body {
   font-size: 1.6rem;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+///
+.header {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(tab-port) {
+    width: 100%;
+    margin: auto;
+    padding: 3rem 0;
+  }
+
+  &__logo {
+    width: 13rem;
+
+    @include respond(tab-port) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    font-size: 1.9rem;
+    display: none;
+
+    @include respond(tab-port) {
+      display: flex;
+      margin-right: auto;
+    }
+
+    &__menu-item {
+      @include respond(tab-port) {
+        align-self: stretch;
+      }
+
+      list-style: none;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+      border: 3px solid transparent;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        color: $grey-600;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+      @include respond(tab-land) {
+        &:not(:last-child) {
+          margin-right: 6rem;
+        }
+      }
+    }
+  }
+}
+
+.header-button-clear {
+  color: black;
+  padding: 2rem 3rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.header-button {
+  background-color: $brightRed;
+  color: white;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 100px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.hamburgerTop,
+.hamburgerMiddle,
+.hamburgerBottom {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: $grey-600;
+}
+
+.hamburgerTop,
+.hamburgerBottom {
+  transition: transform 0.4s ease, margin-top 0.3s ease 0.4s;
+}
+
+.hamburgerMiddle {
+  transition: opacity 0.2s ease 0.5s;
+}
+
+.hamburgerTop {
+  margin-top: 7px;
+}
+
+.hamburgerMiddle {
+  margin-top: 15px;
+}
+
+.hamburgerBottom {
+  margin-top: 23px;
+}
+
+.hamburgerTop.open,
+.hamburgerBottom.open {
+  transition: margin-top 0.3s ease, transform 0.4s ease 0.3s;
+}
+
+.hamburgerTop.open {
+  transform: rotate(45deg);
+  margin-top: 15px;
+}
+
+.hamburgerMiddle.open {
+  opacity: 0;
+  transition: none;
+}
+
+.hamburgerBottom.open {
+  transform: rotate(-45deg);
+  margin-top: 15px;
+}
+
+.nav-container {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.nav-container {
+  color: white;
+  position: absolute;
+  top: 12%;
+  width: 80%;
+  left: 10%;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 2.7rem 3rem 3.7rem 3rem;
+  background-color: $veryDarkBlue;
+  z-index: 1010;
+}
+
+.ham-item {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+.nav-ruler {
+  border: 1px solid $grey-600;
+  margin-bottom: 2rem;
+}
+
+.ham-button {
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  padding: 1.5rem 8rem;
+  border-radius: 100px;
+  background-color: $brightRed;
+  color: white;
+  margin: auto;
+  border: none;
+}
+
+/////
+.hero {
+  margin-bottom: 10rem;
+  overflow-x: hidden;
+
+  @include respond(tab-port) {
+    display: flex;
+    margin-bottom: 12rem;
+  }
+}
+.hero img {
+  margin-bottom: 3rem;
+  width: 92%;
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+
+.image-container {
+  margin-right: -16rem;
+
+  @include respond(tab-port) {
+    order: 1;
+    flex: 47%;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 12rem;
+    flex: 53%;
+  }
+}
+
+.hero h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+
+  @include respond(tab-port) {
+    font-size: 9rem;
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.hero p {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2.3rem;
+  color: $grey-600;
+  width: 80%;
+
+  @include respond(tab-port) {
+    font-size: 2.3rem;
+    text-align: left;
+    width: 80%;
+  }
+}
+
+.hero button {
+  font-size: 2rem;
+  display: block;
+  padding: 1.5rem 5rem;
+  border-radius: 100px;
+  background-color: $brightRed;
+  color: white;
+  margin: auto;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+////
+.statistics {
+  background-color: #f0f1f6;
+  padding-top: 6.5rem;
+  text-align: center;
+
+  @include respond(tab-port) {
+    padding-bottom: 7rem;
+    padding-top: 8rem;
+  }
+}
+
+.statistics h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+
+  @include respond(tab-port) {
+    font-size: 4.5rem;
+  }
+}
+
+.statistics-sub {
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  color: $grey-600;
+
+  @include respond(tab-port) {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 21rem;
+  }
+}
+
+.boxes {
+  @include respond(tab-port) {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.box {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 8rem;
+  padding: 2rem;
+  border-radius: 5px;
+  position: relative;
+
+  @include respond(tab-port) {
+    margin-right: 3rem;
+    margin-top: -10rem;
+    margin-bottom: 18rem;
+
+    &:nth-child(2) {
+      margin-top: -6rem;
+      margin-bottom: 14rem;
+    }
+    &:nth-child(3) {
+      margin-top: -4rem;
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+.box:not(:last-child)::after {
+  content: '';
+  background: $brightRed;
+  position: absolute;
+  bottom: -8rem;
+  left: 50%;
+  height: 8rem;
+  width: 6px;
+
+  @include respond(tab-port) {
+    bottom: 14rem;
+    left: 100%;
+    height: 6px;
+    width: 5rem;
+  }
+}
+
+.box-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.box-text {
+  font-size: 1.6rem;
+  color: $grey-600;
+  margin-bottom: 2.5rem;
+}
+
+.image-circle {
+  padding: 29px 10px;
+  border-radius: 50%;
+  // width: 30%;
+  width: 100px;
+  margin: auto;
+  margin-top: -6rem;
+  margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    width: 110px;
+  }
+
+  &:nth-child(1) {
+    @include respond(tab-port) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.image-circle img {
+  width: 35px;
+  @include respond(tab-port) {
+    width: 45px;
+  }
+}
+
+/////
+.action {
+  width: 100%;
+  margin: auto;
+  padding: 7rem 2rem;
+  text-align: center;
+  // background: url(../../images/bg-boost-mobile.svg) no-repeat center center;
+  // background-size: cover;
+  background-color: #3a3053;
+
+  @include respond(tab-port) {
+    // background: url(../../images/bg-boost-desktop.svg) no-repeat center center;
+    // background-size: cover;
+    background-color: #3a3053;
+  }
+}
+
+.action p {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  @include respond(tab-port) {
+    font-size: 4.2rem;
+  }
+}
+
+.action button {
+  background-color: $brightRed;
+  color: white;
+  font-size: 2rem;
+  display: block;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  margin: auto;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #85f0f0;
+  }
+}
+
+///
+.footer {
+  background-color: #232027;
+  width: 100%;
+  margin: auto;
+  padding: 6rem 2rem;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  max-width: 1440px;
+
+  @include respond(tab-port) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-logo {
+  width: 13rem;
+
+  @include respond(tab-port) {
+    height: 4.3rem;
+    margin-top: 4rem;
+  }
+}
+
+.footer-title {
+  font-size: 1.7rem;
+  color: white;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.footer-item {
+  font-size: 1.4rem;
+  color: $grey-600;
+  margin-bottom: 1.3rem;
+  transition: 0.3s;
+
+  &:hover {
+    color: $brightRed;
+  }
+}
+
+.action button {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: $brightRed;
+  color: white;
+}
+
+ion-icon {
+  font-size: 35px;
+  color: #fff;
+  margin-left: 1.5rem;
+  transition: 0.3s;
+
+  &:hover {
+    color: $brightRed;
+  }
+}
+
+.social {
+  margin-top: 4rem;
+}
+////
+
 .attribution {
   // display: none;
   // @include respond(tab-port) {
