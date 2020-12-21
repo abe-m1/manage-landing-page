@@ -71,22 +71,19 @@ html {
 body {
   font-family: $font-family;
   font-size: 1.6rem;
-
-  //
-
   color: $veryDarkBlue;
   position: relative;
   min-height: 100vh;
 
   background: url('/images/bg-tablet-pattern.svg') 2500% -2% / 99% no-repeat,
     url('/images/bg-tablet-pattern.svg') 600% 15% / 90% no-repeat, #fff;
+  overflow-x: hidden;
 
   @include respond(tab-port) {
     background: url('/images/bg-tablet-pattern.svg') 106% -4%/47% no-repeat,
       url('/images/bg-tablet-pattern.svg') -40% 48%/43% no-repeat, #fff;
     overflow-x: hidden;
   }
-  //
 }
 
 .container {
@@ -171,25 +168,17 @@ body {
   }
 }
 
-.header-button-clear {
-  color: black;
-  padding: 2rem 3rem;
-  border: none;
-  background-color: transparent;
-  border-radius: 100px;
-}
-
 .header-button {
   background-color: $brightRed;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 1.2rem 2rem;
   text-transform: capitalize;
   border-radius: 25px;
   transition: 0.3s;
   cursor: pointer;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.5rem;
   box-shadow: 0 15px 6px -8px hsla(12, 88%, 59%, 0.3);
 
   &:hover {
@@ -197,69 +186,83 @@ body {
   }
 }
 
-.hamburger {
-  width: 30px;
-  height: 30px;
-  margin: 20px;
+.nav-links-container {
+  display: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.5)
+  );
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /*pointer-events: none;*/
 
   @include respond(tab-port) {
-    display: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: unset;
+    height: unset;
   }
 }
 
-.hamburgerTop,
-.hamburgerMiddle,
-.hamburgerBottom {
+ul.nav-links {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: #fff;
   position: absolute;
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: $grey-600;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 1.2rem;
+  border-radius: 5px;
+
+  @include respond(tab-port) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+    position: unset;
+    width: 100%;
+    top: unset;
+    left: unset;
+    transform: translateX(0%);
+    padding: 0;
+  }
 }
 
-.hamburgerTop,
-.hamburgerBottom {
-  transition: transform 0.4s ease, margin-top 0.3s ease 0.4s;
+ul.nav-links li {
+  padding: 0.8rem 0;
 }
 
-.hamburgerMiddle {
-  transition: opacity 0.2s ease 0.5s;
-}
+.nav-item {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
 
-.hamburgerTop {
-  margin-top: 7px;
+  @media screen and (min-width: 1050px) {
+    margin-right: 2.5rem;
+    transition: all 0.3s;
+    padding: 0;
+  }
 }
-
-.hamburgerMiddle {
-  margin-top: 15px;
-}
-
-.hamburgerBottom {
-  margin-top: 23px;
-}
-
-.hamburgerTop.open,
-.hamburgerBottom.open {
-  transition: margin-top 0.3s ease, transform 0.4s ease 0.3s;
-}
-
-.hamburgerTop.open {
-  transform: rotate(45deg);
-  margin-top: 15px;
-}
-
-.hamburgerMiddle.open {
-  opacity: 0;
-  transition: none;
-}
-
-.hamburgerBottom.open {
-  transform: rotate(-45deg);
-  margin-top: 15px;
-}
-
 .nav-container {
   display: none;
+}
+
+.show-mobile-nav {
+  display: block;
 }
 
 .show {
@@ -280,27 +283,19 @@ body {
   z-index: 1010;
 }
 
-.ham-item {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  list-style: none;
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
 }
 
-.nav-ruler {
-  border: 1px solid $grey-600;
-  margin-bottom: 2rem;
+.elevate-element {
+  z-index: 999;
 }
 
-.ham-button {
-  font-size: 2rem;
-  width: 100%;
-  display: block;
-  padding: 1.5rem 8rem;
-  border-radius: 100px;
-  background-color: $brightRed;
-  color: white;
-  margin: auto;
-  border: none;
+@media screen and (min-width: 1050px) {
+  .mobile-nav {
+    display: none;
+  }
 }
 
 /////
@@ -313,7 +308,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 10%;
     width: 100%;
     margin-bottom: 12rem;
   }
@@ -353,7 +348,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 12rem;
+    // padding-left: 12rem;
     flex: 53%;
   }
 }
@@ -411,10 +406,64 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 5%;
+    padding: 0 10%;
     width: 100%;
     margin-bottom: 12rem;
   }
+}
+
+///featrue
+section.features {
+  width: 100%;
+}
+
+section.features .feature {
+  padding-left: 5%;
+}
+
+.feature .feature-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $veryPaleRed;
+  border-radius: 25px 0 0 25px;
+
+  @include respond(tab-port) {
+    background-color: transparent;
+  }
+}
+
+.feature-header .feature-count {
+  background-color: $brightRed;
+  border-radius: 25px;
+  color: #fff;
+  padding: 0.4rem 1.4rem 0.5rem;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.feature-header .feature-heading {
+  // font-size: 1rem;
+}
+
+.feature .feature-details {
+  color: $darkGrayishBlue;
+  padding: 0.5rem 0 2.5rem;
+  margin-left: 6rem;
+  // @include respond(tab-port) {
+  //   background-color: transparent;
+  // }
+}
+
+.box-details {
+  color: $darkGrayishBlue;
+  padding: 0.5rem 0 2.5rem;
+}
+
+section.features {
+  width: 40%;
+  padding-right: 10%;
 }
 
 ////
@@ -450,12 +499,25 @@ body {
   }
 }
 
-.boxes {
+.testimonials {
   display: none;
   @include respond(tab-port) {
+    display: block;
+  }
+}
+
+.testimonials h2 {
+  text-align: center;
+}
+
+.boxes {
+  width: 90%;
+  margin: auto;
+  @include respond(tab-port) {
     display: flex;
-    width: 80%;
-    margin: auto;
+    width: 107%;
+    margin-top: 10rem;
+    margin-bottom: 18rem;
   }
 }
 
@@ -464,15 +526,14 @@ body {
   width: 90%;
   margin: auto;
   margin-bottom: 2rem;
-  padding: 2rem;
+  // padding: 2rem;
   border-radius: 5px;
-  position: relative;
+  // position: relative;
   background-color: $grey-100;
 
   @include respond(tab-port) {
     margin-right: 3rem;
     // margin-top: -10rem;
-    margin-bottom: 18rem;
   }
 }
 
@@ -492,7 +553,7 @@ body {
   // padding: 29px 10px;
   border-radius: 50%;
   // width: 30%;
-  width: 100px;
+  // width: 100px;
   margin: auto;
   margin-top: -6rem;
   margin-bottom: 3rem;
@@ -501,18 +562,15 @@ body {
     width: 110px;
   }
 
-  &:nth-child(1) {
-    @include respond(tab-port) {
-      margin-left: 2rem;
-    }
-  }
+  // &:nth-child(1) {
+  //   @include respond(tab-port) {
+  //     margin-left: 2rem;
+  //   }
+  // }
 }
 
 .image-circle img {
-  width: 75px;
-  @include respond(tab-port) {
-    width: 45px;
-  }
+  width: 100px;
 }
 
 //
@@ -541,7 +599,10 @@ body {
   @include respond(tab-port) {
     // background: url(../../images/bg-boost-desktop.svg) no-repeat center center;
     // background-size: cover;
-    background-color: #3a3053;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    padding: 2rem 10%;
   }
 }
 
@@ -551,6 +612,7 @@ body {
   margin-bottom: 1.5rem;
   @include respond(tab-port) {
     font-size: 4.2rem;
+    width: 60%;
   }
 }
 
@@ -564,6 +626,14 @@ body {
   margin: auto;
   border: none;
   transition: 0.3s;
+
+  @include respond(tab-port) {
+    // width: 100%;
+    padding: 1.5rem 3rem;
+
+    // background-color: $brightRed;
+    // color: white;
+  }
 
   &:hover {
     background-color: #85f0f0;
@@ -594,7 +664,7 @@ body {
   width: 13rem;
 
   @include respond(tab-port) {
-    height: 4.3rem;
+    height: 3.8rem;
     margin-top: 4rem;
   }
 }
@@ -615,14 +685,6 @@ body {
   &:hover {
     color: $brightRed;
   }
-}
-
-.action button {
-  width: 100%;
-  padding: 2rem;
-  border-radius: 10px;
-  background-color: $brightRed;
-  color: white;
 }
 
 ion-icon {

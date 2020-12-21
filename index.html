@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
 
     <title>Frontend Mentor | Manage landing page</title>
 
@@ -20,25 +24,22 @@
     <nav class="container">
       <header class="header">
         <img class="header__logo" src="../../images/logo.svg" alt="" />
-        <ul class="header__menu">
-          <li class="header__menu__menu-item">Pricing</li>
-          <li class="header__menu__menu-item">Product</li>
-          <li class="header__menu__menu-item">About Us</li>
-          <li class="header__menu__menu-item">Careers</li>
-          <li class="header__menu__menu-item">Community</li>
-        </ul>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li class="nav-item">Pricing</li>
+            <li class="nav-item">Product</li>
+            <li class="nav-item">About Us</li>
+            <li class="nav-item">Careers</li>
+            <li class="nav-item">Community</li>
+          </ul>
+        </div>
         <ul class="header__button">
           <button class="header-button">Get Started</button>
         </ul>
-
-        <div class="hamburger">
-          <div class="hamburgerTop"></div>
-          <div class="hamburgerMiddle"></div>
-          <div class="hamburgerBottom"></div>
-        </div>
+        <i class="fas fa-bars mobile-nav" id="mobile-nav"></i>
       </header>
 
-      <div class="nav-container">
+      <!-- <div class="nav-container">
         <div class="nav-modal">
           <ul class="ham-list">
             <li class="ham-item">Features</li>
@@ -49,7 +50,7 @@
             <button class="ham-button">Sign Up</button>
           </ul>
         </div>
-      </div>
+      </div> -->
     </nav>
 
     <section class="hero">
@@ -78,7 +79,7 @@
         </p>
       </div>
       <div class="text-container">
-        <div class="side-box">
+        <!-- <div class="side-box">
           <div>
             <span class="side-number">01</span>
           </div>
@@ -90,42 +91,46 @@
               smallest of details. Never lose sight of the bigger picture again.
             </p>
           </div>
+        </div> -->
+        <div class="feature">
+          <div class="feature-header">
+            <div class="feature-count">01</div>
+            <h3 class="feature-heading">Track company-wide progress</h3>
+          </div>
+          <p class="feature-details">
+            See how your day-day tasks fit into the wider vision. Go from
+            tracking progress at the milestone level all the way down to the
+            smallest of details. Never lose sight of the bigger picture again
+          </p>
         </div>
-        <div class="side-box">
-          <div>
-            <span class="side-number">02</span>
+        <div class="feature">
+          <div class="feature-header">
+            <div class="feature-count">02</div>
+            <h3 class="feature-heading">Advanced built-in reports</h3>
           </div>
-          <div class="side-text">
-            <p>Advanced built-in reports</p>
-            <p>
-              Set internal delivery estimates and track progress toward company
-              goals. Our customisable dashboard helps you build out the reports
-              you need to keep key stakeholders informed.
-            </p>
-          </div>
+          <p class="feature-details">
+            Set internal delivery estimates and track progress toward company
+            goals. Our customisable dashboard helps you build out the reports
+            you need to keep key stakeholders informed.
+          </p>
         </div>
-        <div class="side-box">
-          <div>
-            <span class="side-number">03</span>
+        <div class="feature">
+          <div class="feature-header">
+            <div class="feature-count">03</div>
+            <h3 class="feature-heading">Everything you need in one place</h3>
           </div>
-          <div class="side-text">
-            <p>Everything you need in one place</p>
-            <p>
-              Stop jumping from one service to another to communicate, store
-              files, track tasks and share documents. Manage offers an
-              all-in-one team productivity solution.
-            </p>
-          </div>
+          <p class="feature-details">
+            Stop jumping from one service to another to communicate, store
+            files, track tasks and share documents. Manage offers an all-in-one
+            team productivity solution.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="slideshow">
-      <!-- Slideshow container -->
       <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
           <div class="box">
             <div class="image-circle">
               <img src="/images/avatar-anisha.png" alt="" />
@@ -142,7 +147,6 @@
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
           <div class="box">
             <div class="image-circle">
               <img src="/images/avatar-ali.png" alt="" />
@@ -158,7 +162,6 @@
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
           <div class="box">
             <div class="image-circle">
               <img src="/images/avatar-richard.png" alt="" />
@@ -174,7 +177,6 @@
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">4 / 3</div>
           <div class="box">
             <div class="image-circle">
               <img src="/images/avatar-shanai.png" alt="" />
@@ -204,7 +206,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="testimonials">
       <h2>What they’ve said</h2>
       <div class="boxes">
         <div class="box">
