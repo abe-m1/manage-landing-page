@@ -24,7 +24,7 @@
     <nav class="container">
       <header class="header">
         <img class="header__logo" src="../../images/logo.svg" alt="" />
-        <div class="nav-links-container">
+        <div class="header__nav-container">
           <ul class="nav-links">
             <li class="nav-item">Pricing</li>
             <li class="nav-item">Product</li>
@@ -33,24 +33,11 @@
             <li class="nav-item">Community</li>
           </ul>
         </div>
-        <ul class="header__button">
-          <button class="header-button">Get Started</button>
+        <ul class="header__button-container">
+          <button class="header__button">Get Started</button>
         </ul>
         <i class="fas fa-bars mobile-nav" id="mobile-nav"></i>
       </header>
-
-      <!-- <div class="nav-container">
-        <div class="nav-modal">
-          <ul class="ham-list">
-            <li class="ham-item">Features</li>
-            <li class="ham-item">Pricing</li>
-            <li class="ham-item">Resources</li>
-            <hr class="nav-ruler" />
-            <li class="ham-item">Login</li>
-            <button class="ham-button">Sign Up</button>
-          </ul>
-        </div>
-      </div> -->
     </nav>
 
     <section class="hero">
@@ -64,7 +51,7 @@
           while keeping the larger team goals in view.
         </p>
         <div>
-          <button>Get Started</button>
+          <button class="start-button">Get Started</button>
         </div>
       </div>
     </section>
@@ -191,14 +178,12 @@
           <div class="text">Caption Three</div>
         </div>
 
-        <!-- Next and previous buttons -->
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
       </div>
       <br />
 
-      <!-- The dots/circles -->
-      <div style="text-align: center">
+      <div class="dots">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -260,6 +245,10 @@
       </div>
     </section>
 
+    <div>
+      <button class="start-button testimonial-button">Get Started</button>
+    </div>
+
     <section>
       <div class="action">
         <p>Simplify how your team works today.</p>
@@ -267,38 +256,42 @@
       </div>
     </section>
 
-    <section class="footer">
-      <div class="footer-container">
-        <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
-        <div class="social">
-          <ion-icon name="logo-facebook"></ion-icon>
-          <ion-icon name="logo-twitter"></ion-icon>
-          <ion-icon name="logo-pinterest"></ion-icon>
-          <ion-icon name="logo-instagram"></ion-icon>
-        </div>
-        <div>
-          <p class="footer-title">Home</p>
-          <p class="footer-item">Pricing</p>
-          <p class="footer-item">Products</p>
-          <p class="footer-item">About Us</p>
-        </div>
-
-        <div>
-          <p class="footer-title">Careers</p>
-          <p class="footer-item">Community</p>
-          <p class="footer-item">Privacy Policy</p>
-        </div>
-
-        <div>
+    <footer>
+      <form class="update-form">
+        
           <input
-            placeholder="Updates in
-     your inbox…"
+            type="text"
+            placeholder="Updates in your inbox..."
+        
           />
-          <button>Go</button>
-          <p>Go Copyright 2020. All Rights Reserved</p>
-        </div>
+        </label>
+        <button class="footer-go">Go</button>
+        <p class="error">Please enter a valid email</p>
+      </form>
+
+      <div class="footer-nav">
+        <ul class="footer-nav-links">
+          <li class="footer-nav-link"><a href="#">home</a></li>
+          <li class="footer-nav-link"><a href="#">pricing</a></li>
+          <li class="footer-nav-link"><a href="#">products</a></li>
+          <li class="footer-nav-link"><a href="#">about us</a></li>
+        </ul>
+
+        <ul class="footer-nav-links">
+          <li class="footer-nav-link"><a href="#">careers</a></li>
+          <li class="footer-nav-link"><a href="#">community</a></li>
+          <li class="footer-nav-link"><a href="#">privacy policy</a></li>
+        </ul>
       </div>
-    </section>
+      <div class="social-media">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-pinterest"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
+      <img class="footer-logo" src="../../images/logo-white.svg" alt="" />
+      <p class="copy">Copyright 2020. All Rights Reserved</p>
+    </footer>
 
     <div class="attribution">
       Challenge by

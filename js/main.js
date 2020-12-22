@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const mobileNav = document.querySelector('.nav-links-container');
+const mobileNav = document.querySelector('.header__nav-container');
 const hamburgerToggle = document.getElementById('mobile-nav');
 
 var next = document.querySelector('.next');
@@ -47,6 +47,7 @@ function showSlides(n) {
 }
 
 hamburgerToggle.addEventListener('click', () => {
+  console.log('click');
   if (hamburgerToggle.className === 'fas fa-bars mobile-nav') {
     hamburgerToggle.className = 'fas fa-times mobile-nav elevate-element';
     mobileNav.classList.add('show-mobile-nav');
