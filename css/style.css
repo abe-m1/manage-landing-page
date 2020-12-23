@@ -121,7 +121,7 @@ body {
   overflow-x: hidden; }
 
 .header {
-  padding: 2rem 0;
+  padding: 3rem 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -154,7 +154,7 @@ body {
     font-size: 1.5rem;
     box-shadow: 0 15px 6px -8px rgba(242, 95, 58, 0.3); }
     .header__button:hover {
-      opacity: 0.5; }
+      background-color: #ffefeb; }
   .header__menu {
     font-size: 1.9rem;
     display: none; }
@@ -204,9 +204,11 @@ body {
         position: unset;
         height: unset; } }
 
-@media (min-width: 900px) {
-  .mobile-nav {
-    display: none; } }
+.mobile-nav {
+  font-size: 3rem; }
+  @media (min-width: 900px) {
+    .mobile-nav {
+      display: none; } }
 
 .nav-links {
   display: flex;
@@ -241,7 +243,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   text-transform: capitalize; }
-  @media screen and (min-width: 1050px) {
+  @media (min-width: 900px) {
     .nav-item {
       margin-right: 2.5rem;
       transition: all 0.3s;
@@ -264,7 +266,6 @@ body {
   z-index: 999; }
 
 .hero {
-  margin-bottom: 10rem;
   overflow-x: hidden; }
   @media (min-width: 900px) {
     .hero {
@@ -277,20 +278,30 @@ body {
       margin-bottom: 12rem; } }
 
 .hero img {
-  margin-bottom: 3rem;
   width: 92%; }
   @media (min-width: 900px) {
     .hero img {
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 3rem; } }
 
 @media (min-width: 900px) {
   .image-container {
     order: 1;
     flex: 47%; } }
 
-@media (min-width: 900px) {
-  .second-container {
-    flex: 47%; } }
+.second-container {
+  padding: 0 10%;
+  text-align: center;
+  margin-bottom: 4rem; }
+  @media (min-width: 900px) {
+    .second-container {
+      flex: 47%; } }
+
+.second-container h2 {
+  font-size: 2.4rem; }
+
+.second-container p {
+  color: #9095a7; }
 
 .text-container {
   display: flex;
@@ -307,7 +318,7 @@ body {
       flex: 53%; } }
 
 .hero h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   margin-bottom: 2rem;
   line-height: 1.3; }
@@ -318,10 +329,10 @@ body {
       margin-bottom: 0; } }
 
 .hero p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2.3rem;
-  color: #48556a;
+  color: #9095a7;
   width: 80%; }
   @media (min-width: 900px) {
     .hero p {
@@ -330,20 +341,22 @@ body {
       width: 80%; } }
 
 .start-button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: block;
-  padding: 1.5rem 5rem;
+  padding: 1rem 3rem;
   border-radius: 100px;
   background-color: #f25f3a;
   color: white;
   margin: auto;
   border: none;
-  transition: 0.3s; }
+  box-shadow: 0 15px 6px -8px rgba(242, 95, 58, 0.3);
+  transition: 0.3s;
+  margin-bottom: 9rem; }
   .start-button:hover {
     opacity: 0.5; }
 
 .second {
-  margin-bottom: 10rem;
+  margin-bottom: 1rem;
   overflow-x: hidden; }
   @media (min-width: 900px) {
     .second {
@@ -444,22 +457,28 @@ body {
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 5px;
-  background-color: #ecf2f8; }
+  background-color: #fafafa; }
   @media (min-width: 900px) {
     .box {
       margin-right: 3rem;
       width: 90%; } }
 
 .box-title {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 2rem; }
+  @media (min-width: 900px) {
+    .box-title {
+      font-size: 2.4rem; } }
 
 .box-text {
-  font-size: 1.6rem;
-  color: #48556a;
-  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  color: #9095a7;
+  margin-bottom: 1rem;
   text-align: center; }
+  @media (min-width: 900px) {
+    .box-text {
+      font-size: 1.6rem; } }
 
 .image-circle {
   border-radius: 50%;
@@ -471,10 +490,13 @@ body {
       width: 110px; } }
 
 .image-circle img {
-  width: 100px; }
+  width: 80px; }
+  @media (min-width: 900px) {
+    .image-circle img {
+      width: 100px; } }
 
 .testimonial-button {
-  margin-bottom: 7rem; }
+  margin-bottom: 5rem; }
 
 .side-box {
   display: flex; }
@@ -498,26 +520,28 @@ body {
       display: flex;
       text-align: left;
       justify-content: space-between;
-      padding: 2rem 10%; } }
+      padding: 3rem 10%; } }
 
 .action p {
-  font-size: 3rem;
+  font-size: 4rem;
+  line-height: 1.2;
   color: white;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2.5rem; }
   @media (min-width: 900px) {
     .action p {
       font-size: 4.2rem;
-      width: 60%; } }
+      width: 45%; } }
 
 .action button {
   background-color: #ffffff;
   color: #f25f3a;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: block;
-  padding: 1.5rem 4rem;
+  padding: 1.2rem 3rem;
   border-radius: 100px;
   margin: auto;
   border: none;
+  box-shadow: 0 15px 6px -8px rgba(242, 95, 58, 0.3);
   transition: 0.3s; }
   @media (min-width: 900px) {
     .action button {
@@ -528,7 +552,7 @@ body {
 footer {
   background-color: #1d1e25;
   color: #9095a7;
-  padding: 3rem 5%;
+  padding: 3rem 10%;
   text-align: center; }
   @media (min-width: 900px) {
     footer {
@@ -546,7 +570,7 @@ footer {
   @media (min-width: 900px) {
     .update-form {
       order: 2;
-      width: 40%; } }
+      width: 34%; } }
 
 .update-form input[type='text'] {
   width: 100%;
@@ -599,6 +623,7 @@ footer {
 
 .footer-nav-link a {
   color: #9095a7;
+  font-size: 1.8rem;
   text-decoration: none;
   text-transform: capitalize; }
   @media (min-width: 900px) {
@@ -630,7 +655,7 @@ footer {
 
 .footer-logo {
   margin: auto;
-  margin-bottom: 3rem; }
+  margin-bottom: 5rem; }
   @media (min-width: 900px) {
     .footer-logo {
       margin: 0 0 3rem; } }
@@ -666,10 +691,12 @@ ion-icon {
 .social {
   margin-top: 4rem; }
 
-@media (min-width: 900px) {
-  .copy {
-    order: 5;
-    font-size: 0.8rem; } }
+.copy {
+  margin-bottom: 3rem; }
+  @media (min-width: 900px) {
+    .copy {
+      order: 5;
+      font-size: 0.8rem; } }
 
 .attribution {
   font-size: 11px;
@@ -687,6 +714,10 @@ ion-icon {
   .slideshow {
     display: none; } }
 
+.slideshow h2 {
+  font-size: 2.7rem;
+  text-align: center; }
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -694,6 +725,7 @@ ion-icon {
 
 /* Hide the images by default */
 .mySlides {
+  margin-top: 8rem;
   display: none; }
 
 /* Next & previous buttons */
@@ -737,18 +769,25 @@ ion-icon {
 
 .dots {
   text-align: center;
-  margin-bottom: 5rem; }
+  margin-bottom: 3rem; }
+  @media (min-width: 900px) {
+    .dots {
+      margin-bottom: 5rem; } }
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 9px;
+  width: 9px;
   margin: 0 2px;
   border: 1px solid #f25f3a;
   background-color: transparent;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease; }
+  @media (min-width: 900px) {
+    .dot {
+      height: 15px;
+      width: 15px; } }
 
 .active,
 .dot:hover {
