@@ -102,7 +102,7 @@ body {
   @include respond(tab-port) {
     width: 100%;
     margin: auto;
-    padding: 3rem 0;
+    padding: 6rem 0 12rem;
   }
 
   &__logo {
@@ -110,6 +110,7 @@ body {
 
     @include respond(tab-port) {
       margin-right: 4rem;
+      width: 17rem;
     }
   }
 
@@ -318,15 +319,24 @@ body {
   margin-bottom: 4rem;
   @include respond(tab-port) {
     flex: 47%;
+    padding: 0 3%;
+    text-align: left;
   }
 }
 
 .second-container h2 {
   font-size: 2.4rem;
+  @include respond(tab-port) {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .second-container p {
   color: $darkGrayishBlue;
+  @include respond(tab-port) {
+    width: 60%;
+  }
 }
 
 .text-container {
@@ -403,12 +413,16 @@ body {
     align-items: flex-start;
     padding: 0 10%;
     width: 100%;
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
   }
 }
 
 .feature {
   padding-left: 5%;
+
+  @include respond(tab-port) {
+    margin-bottom: 1.6rem;
+  }
 }
 
 .feature-header {
@@ -423,6 +437,7 @@ body {
   @include respond(tab-port) {
     margin-left: 0;
     background-color: transparent;
+    margin-bottom: 2rem;
   }
 }
 
@@ -433,15 +448,22 @@ body {
   padding: 0.4rem 1.4rem 0.5rem;
   font-weight: 500;
   margin-right: 1rem;
+
+  @include respond(tab-port) {
+    padding: 0.8rem 2rem 0.8rem;
+    margin-right: 3rem;
+  }
 }
 
 .feature-details {
   color: $darkGrayishBlue;
   padding: 0.5rem 0 2.5rem;
   margin-left: 6rem;
-  // @include respond(tab-port) {
-  //   background-color: transparent;
-  // }
+  @include respond(tab-port) {
+    width: 70%;
+    line-height: 1.7;
+    margin-left: 9rem;
+  }
 }
 
 .box-details {
@@ -491,6 +513,10 @@ body {
 
 .testimonials h2 {
   text-align: center;
+
+  @include respond(tab-port) {
+    font-size: 4.5rem;
+  }
 }
 
 .boxes {
@@ -500,7 +526,7 @@ body {
     display: flex;
     width: 107%;
     margin-top: 10rem;
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -522,6 +548,10 @@ body {
     margin-right: 3rem;
     width: 90%;
     // margin-top: -10rem;
+
+    &:last-child {
+      display: none;
+    }
   }
 }
 
@@ -574,6 +604,10 @@ body {
 
 .testimonial-button {
   margin-bottom: 5rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 20rem;
+  }
 }
 //
 .side-box {
@@ -604,7 +638,7 @@ body {
     display: flex;
     text-align: left;
     justify-content: space-between;
-    padding: 3rem 10%;
+    padding: 6rem 10%;
   }
 }
 
@@ -657,7 +691,7 @@ footer {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 3rem 10%;
+    padding: 8rem 10%;
   }
 }
 

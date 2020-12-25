@@ -130,12 +130,13 @@ body {
     .header {
       width: 100%;
       margin: auto;
-      padding: 3rem 0; } }
+      padding: 6rem 0 12rem; } }
   .header__logo {
     width: 13rem; }
     @media (min-width: 900px) {
       .header__logo {
-        margin-right: 4rem; } }
+        margin-right: 4rem;
+        width: 17rem; } }
   .header__button-container {
     display: none; }
     @media (min-width: 900px) {
@@ -295,13 +296,22 @@ body {
   margin-bottom: 4rem; }
   @media (min-width: 900px) {
     .second-container {
-      flex: 47%; } }
+      flex: 47%;
+      padding: 0 3%;
+      text-align: left; } }
 
 .second-container h2 {
   font-size: 2.4rem; }
+  @media (min-width: 900px) {
+    .second-container h2 {
+      font-size: 4rem;
+      margin-bottom: 3rem; } }
 
 .second-container p {
   color: #9095a7; }
+  @media (min-width: 900px) {
+    .second-container p {
+      width: 60%; } }
 
 .text-container {
   display: flex;
@@ -366,10 +376,13 @@ body {
       align-items: flex-start;
       padding: 0 10%;
       width: 100%;
-      margin-bottom: 12rem; } }
+      margin-bottom: 10rem; } }
 
 .feature {
   padding-left: 5%; }
+  @media (min-width: 900px) {
+    .feature {
+      margin-bottom: 1.6rem; } }
 
 .feature-header {
   margin-left: 1rem;
@@ -382,7 +395,8 @@ body {
   @media (min-width: 900px) {
     .feature-header {
       margin-left: 0;
-      background-color: transparent; } }
+      background-color: transparent;
+      margin-bottom: 2rem; } }
 
 .feature-count {
   background-color: #f25f3a;
@@ -391,11 +405,20 @@ body {
   padding: 0.4rem 1.4rem 0.5rem;
   font-weight: 500;
   margin-right: 1rem; }
+  @media (min-width: 900px) {
+    .feature-count {
+      padding: 0.8rem 2rem 0.8rem;
+      margin-right: 3rem; } }
 
 .feature-details {
   color: #9095a7;
   padding: 0.5rem 0 2.5rem;
   margin-left: 6rem; }
+  @media (min-width: 900px) {
+    .feature-details {
+      width: 70%;
+      line-height: 1.7;
+      margin-left: 9rem; } }
 
 .box-details {
   color: #9095a7;
@@ -435,6 +458,9 @@ body {
 
 .testimonials h2 {
   text-align: center; }
+  @media (min-width: 900px) {
+    .testimonials h2 {
+      font-size: 4.5rem; } }
 
 .boxes {
   width: 90%;
@@ -444,7 +470,7 @@ body {
       display: flex;
       width: 107%;
       margin-top: 10rem;
-      margin-bottom: 7rem; } }
+      margin-bottom: 4rem; } }
 
 .box {
   background-color: white;
@@ -461,7 +487,9 @@ body {
   @media (min-width: 900px) {
     .box {
       margin-right: 3rem;
-      width: 90%; } }
+      width: 90%; }
+      .box:last-child {
+        display: none; } }
 
 .box-title {
   font-size: 1.8rem;
@@ -497,6 +525,9 @@ body {
 
 .testimonial-button {
   margin-bottom: 5rem; }
+  @media (min-width: 900px) {
+    .testimonial-button {
+      margin-bottom: 20rem; } }
 
 .side-box {
   display: flex; }
@@ -520,7 +551,7 @@ body {
       display: flex;
       text-align: left;
       justify-content: space-between;
-      padding: 3rem 10%; } }
+      padding: 6rem 10%; } }
 
 .action p {
   font-size: 4rem;
@@ -560,7 +591,7 @@ footer {
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 3rem 10%; } }
+      padding: 8rem 10%; } }
 
 .update-form {
   display: flex;
