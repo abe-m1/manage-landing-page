@@ -580,7 +580,7 @@ body {
   background-color: #f25f3a;
   color: white;
   border: none;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 3rem;
   text-transform: capitalize;
   border-radius: 25px;
   transition: 0.3s;
@@ -591,17 +591,16 @@ body {
   .button:hover {
     background-color: #ffefeb; }
   .button__testimonial {
+    display: block;
+    margin: auto;
     margin-bottom: 5rem; }
     @media (min-width: 900px) {
       .button__testimonial {
-        display: block;
-        margin: auto;
         margin-bottom: 20rem; } }
   .button__action {
     background-color: #ffffff;
     color: #f25f3a;
     display: block;
-    padding: 1.2rem 3rem;
     margin: auto;
     transition: 0.3s; }
     @media (min-width: 900px) {
@@ -769,9 +768,12 @@ ion-icon {
       font-size: 1.3rem; } }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
-  display: block; }
+  display: none; }
+  @media (min-width: 900px) {
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: block; } }
 
 .attribution a {
   color: #3e52a3; }
