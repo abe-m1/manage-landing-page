@@ -1,0 +1,49 @@
+// Variables
+$brightRed: hsl(12, 88%, 59%);
+$darkBlue: hsl(228, 39%, 23%);
+
+$darkGrayishBlue: hsl(227, 12%, 61%);
+$veryDarkBlue: hsl(233, 12%, 13%);
+$veryPaleRed: hsl(13, 100%, 96%);
+$varyLightGray: hsl(0, 0%, 98%);
+
+$white: hsl(0, 0%, 100%);
+$grey-100: hsl(210, 46%, 95%);
+$grey-200: hsl(0, 0%, 81%);
+$grey-600: hsl(217, 19%, 35%);
+$grey-800: hsl(219, 29%, 14%);
+
+$size-main: 0.8125rem; // 13px - very small!
+$size-small: 0.6875rem;
+$font-family: 'Be Vietnam', sans-serif;
+$weight-normal: 500;
+$weight-bold: 600;
+
+//mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+}

@@ -2,10 +2,9 @@ const body = document.querySelector('body');
 const mobileNav = document.querySelector('.header__nav-container');
 const hamburgerToggle = document.getElementById('mobile-nav');
 
-var next = document.querySelector('.next');
-var prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
-console.log(next);
 next.addEventListener('click', () => {
   plusSlides(1);
 });
@@ -13,7 +12,7 @@ prev.addEventListener('click', () => {
   plusSlides(-1);
 });
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -27,9 +26,9 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('dot');
+  let i;
+  const slides = document.getElementsByClassName('mySlides');
+  const dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -58,3 +57,34 @@ hamburgerToggle.addEventListener('click', () => {
     body.classList.remove('no-scroll');
   }
 });
+
+//variables for error handling
+const submitButton = document.querySelector('#button-submit');
+const input = document.querySelector('#input');
+const errorMessage = document.querySelector('.error-message');
+const errorCircle = document.querySelector('.error-circle');
+const inputContainer = document.querySelector('.input-container');
+const form = document.querySelector('#form');
+
+//validation function
+function validate(e) {
+  e.preventDefault();
+  const regEx = /^.+@\w+\.\w+$/;
+  console.log(input.value);
+  if (regEx.test(String(input.value).toLowerCase())) {
+    console.log('valid');
+    input.classList.remove('form-error');
+    errorMessage.style.display = 'none';
+    inputContainer.classList.remove('box-error');
+    input.style = 'color: black';
+    inputContainer.classList.remove('box-error');
+  } else {
+    errorMessage.style.display = 'block';
+    input.classList.add('form-error');
+    inputContainer.classList.add('box-error');
+    input.style = 'color: hsl(12, 88%, 59%)';
+    input.classList.add('place');
+  }
+}
+
+submitButton.addEventListener('click', validate);
